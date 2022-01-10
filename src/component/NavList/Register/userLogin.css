@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.userBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  font-family: fantasy;
+  position: relative;
+  top: 0;
+}
+.userForm {
+  position: absolute;
+  /* border: 1px solid black; */
+  width: 80%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  right: 0;
+  top: 10px;
+}
+.user-label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 10px;
+  margin-top: 10px;
+}
+.userInput {
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+}
+.btn-login {
+  width: 50%;
+  background-color: rgb(36, 30, 30);
+}
+.btn-login:hover {
+  width: 50%;
+  background-color: rgb(36, 30, 30);
+}
+.footer {
+  position: absolute;
+  top: 45%;
+  display: flex;
+
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.footer a {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  letter-spacing: 5px;
+  font-weight: 900;
+  color: black;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: blue;
+  transition: 0.4s ease-in-out;
+  border-bottom: 1px solid red;
+}
+.footer p {
+  position: absolute;
+  bottom: -13px;
+  left: 30%;
+}
+.error {
+  color: red;
+  position: absolute;
+
+  margin: 10px;
+  left: 0;
+  bottom: 0;
+  border: 1px solid black;
+  width: 100%;
+  height: 30px;
+}
