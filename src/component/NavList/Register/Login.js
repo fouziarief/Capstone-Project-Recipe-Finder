@@ -22,7 +22,7 @@ function Login() {
               value={values.userName}
               onChange={HandleChange}
             />
-            {errors.email && <p>{errors.email}</p>}
+            {errors.email && <p className="error">{errors.email}</p>}
           </div>
           <div className="form-detail">
             <label className="form-label">Password</label>
@@ -34,7 +34,7 @@ function Login() {
               placeholder="Password"
               onChange={HandleChange}
             />
-            {errors.password && <p>{errors.password} </p>}
+            {errors.password && <p className="error">{errors.password} </p>}
           </div>
           <span className="form-login">
             <a href="#">Forget Password</a>

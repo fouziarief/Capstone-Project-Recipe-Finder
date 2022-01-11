@@ -33,14 +33,14 @@ export const Data = [
     ),
     className: "Nav-text",
   },
-  {
-    title: "SignUp",
-    path: "/SignUp",
-    icon: (
-      <FaSignOutAlt
-        style={{ marginRight: "15px", position: "absolute", left: "30px" }}
-      />
-    ),
-    className: "Nav-text",
-  },
+  // {
+  //   title: "SignUp",
+  //   path: "/SignUp",
+  //   icon: (
+  //     <FaSignOutAlt
+  //       style={{ marginRight: "15px", position: "absolute", left: "30px" }}
+  //     />
+  //   ),
+  //   className: "Nav-text",
+  // },
 ];

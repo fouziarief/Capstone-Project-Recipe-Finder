@@ -16,18 +16,20 @@
   align-items: center;
 }
 .form h1 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   text-align: start;
   width: 80%;
   margin-bottom: 1rem;
   color: rgb(63, 62, 62);
 }
+
 .form-detail {
   margin-bottom: 0.5rem;
   width: 80%;
+  position: relative;
 }
-.form-detail p {
-  font-size: 0.8rem;
+.error {
+  font-size: 1rem;
   margin-top: 0.5rem;
   color: #f00e0e;
 }

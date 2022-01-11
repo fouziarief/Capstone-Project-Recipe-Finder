@@ -2,6 +2,7 @@ import React from "react";
 import useForm from "./UseForm";
 import { Link } from "react-router-dom";
 import Validate from "./Validate";
+import "./userLogin.css";
 
 function SignUp() {
   const { HandleChange, values, HandleSumbit, errors } = useForm(Validate);
@@ -23,7 +24,7 @@ function SignUp() {
             value={values.userName}
             onChange={HandleChange}
           />
-          {errors.userName && <p>{errors.userName}</p>}
+          {errors.userName && <p className="error">{errors.userName}</p>}
         </div>
         <div className="form-detail">
           <label htmlFor="Email" className="form-label">
@@ -37,7 +38,7 @@ function SignUp() {
             value={values.email}
             onChange={HandleChange}
           />
-          {errors.email && <p>{errors.email}</p>}
+          {errors.email && <p className="error">{errors.email}</p>}
         </div>
         <div className="form-detail">
           <label htmlFor="password" className="form-label">
@@ -51,7 +52,7 @@ function SignUp() {
             value={values.password}
             onChange={HandleChange}
           />
-          {errors.password && <p>{errors.password}</p>}
+          {errors.password && <p className="error">{errors.password}</p>}
         </div>
         <div className="form-detail">
           <label htmlFor="password1" className="form-label">
@@ -65,7 +66,7 @@ function SignUp() {
             value={values.password1}
             onChange={HandleChange}
           />
-          {errors.password1 && <p>{errors.password1}</p>}
+          {errors.password1 && <p className="error">{errors.password1}</p>}
         </div>
         <button className="form-btn" type="submit">
           SignUp
