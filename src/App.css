@@ -1,3 +1,6 @@
+body {
+  width: 100%;
+}
 .navStyle {
   position: relative;
   color: white;
@@ -88,7 +91,7 @@
 .recipe-display {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 350px 350px 350px;
+  grid-template-columns: 270px 270px 270px 270px;
   grid-gap: 40px;
   background: linear-gradient(
       rgba(248, 245, 245, 0.6),
@@ -114,10 +117,11 @@
 }
 .menu-bar {
   color: white;
-  margin-right: 2rem;
   font-size: 2rem;
   background: none;
   text-decoration: none;
+  position: relative;
+  left: -20px;
 }
 .nav-menu {
   background: linear-gradient(
@@ -128,49 +132,81 @@
   /* box-shadow: 1px 3px 0 5px rgb(202, 198, 198); */
   border-radius: 1px;
   width: 200px;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  right: -600%;
+  /* align-items: center; */
+  right: -100%;
   transition: 0.5s ease;
-  position: absolute;
-  top: 55px;
+  position: fixed;
+  top: 70px;
 }
 .nav-menu.active {
   right: 0px;
   transition: 1s;
 }
-.Nav-text {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px;
-  color: white;
-  font-size: 1.2rem;
-  width: 100%;
-  list-style: none;
-}
-.navStyle {
-}
 .menu-item {
+  margin-right: 2rem;
+  height: auto;
+  width: 100%;
   font-size: 1.2rem;
   position: absolute;
   top: 0px;
   text-decoration: none;
+  list-style: none;
 }
+.Nav-text {
+  /* border: 1px solid black; */
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 0px 8px 16px;
+  color: white;
+  font-size: 1.2rem;
+  width: 100%;
+  list-style: none;
+  margin: 10px;
+}
+
 .Nav-text a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
   margin: 10px;
   color: white;
   padding: 10px;
 }
-.userBox {
+.Nav-text a:hover {
+  background-color: rgba(61, 60, 60, 0.8);
+  color: aqua;
+}
+.navLink {
+  width: 100%;
+}
+
+.navbar-toggle {
+  text-decoration: none;
+  list-style: none;
+  background-color: #060b26;
+  width: 1005;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.outer-container {
   background: url(./image/Login.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  top: 0;
 }

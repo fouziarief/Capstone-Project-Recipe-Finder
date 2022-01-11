@@ -34,8 +34,8 @@ export const Data = [
     className: "Nav-text",
   },
   {
-    title: "SignOut",
-    path: "/signOut",
+    title: "SignUp",
+    path: "/SignUp",
     icon: (
       <FaSignOutAlt
         style={{ marginRight: "15px", position: "absolute", left: "30px" }}

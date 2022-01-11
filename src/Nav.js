@@ -3,10 +3,10 @@ import { Navbar, Container } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { Data } from "./component/NavList/Data";
+import { AiOutlineClose } from "react-icons/ai";
 
 function Nav() {
   const [menu, setMenu] = useState(false);
-
   const showMenu = () => {
     setMenu(!menu);
   };
@@ -33,10 +33,15 @@ function Nav() {
                 </Link>
                 <nav className={menu ? "nav-menu active" : "nav-menu"}>
                   <ul className="menu-item" onClick={showMenu}>
+                    <li className="nav-toggle">
+                      {/* <Link to="#" className="navLink">
+                        <AiOutlineClose />
+                      </Link> */}
+                    </li>
                     {Data.map((item, index) => {
                       return (
                         <li key={index} className={item.className}>
-                          <Link to={item.path}>
+                          <Link to={item.path} className="navLink">
                             {item.icon}
                             <span>{item.title}</span>
                           </Link>
