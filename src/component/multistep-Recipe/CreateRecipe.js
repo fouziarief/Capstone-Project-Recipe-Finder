@@ -49,7 +49,8 @@ function CreateRecipe() {
         id: Math.floor(Math.random() * 1000),
       };
       setIngrediants([...ingrediants, newIngrediant]);
-      setRecipeValues({ ingrediant: "" });
+
+      setRecipeValues({ ...recipeValues, ingrediant: "" });
       console.log();
     }
     e.preventDefault();
@@ -62,7 +63,7 @@ function CreateRecipe() {
       };
       setMethodList([...methodList, newMethodList]);
     }
-    setRecipeValues({ method: " " });
+    setRecipeValues({ ...recipeValues, method: " " });
     e.preventDefault();
   };
   useEffect(() => {

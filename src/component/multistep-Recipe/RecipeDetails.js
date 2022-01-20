@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 
 function RecipeDetails({ values, handleChange, handleFileChange }) {
   const { register, errors } = useForm();
-  console.log(errors);
   const fileInput = useRef();
   const openFilePicker = () => {
     fileInput.current.click();
