@@ -15,7 +15,7 @@ export const Data = [
   },
   {
     title: "Add Recipe",
-    path: "/Add Recipe",
+    path: "/AddRecipe",
     icon: (
       <MdCreateNewFolder
         style={{ marginRight: "15px", position: "absolute", left: "30px" }}
@@ -25,7 +25,7 @@ export const Data = [
   },
   {
     title: "List",
-    path: "/List",
+    path: "/RecipeList",
     icon: (
       <MdRestaurantMenu
         style={{ marginRight: "15px", position: "absolute", left: "30px" }}

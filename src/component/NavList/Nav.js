@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navbar, Container } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { Data } from "./component/NavList/Data";
+import { Data } from "./Register/Data";
 import { AiOutlineClose } from "react-icons/ai";
 
 function Nav() {

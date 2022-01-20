@@ -1,6 +1,6 @@
-body {
+/* body {
   width: 100%;
-}
+} */
 .navStyle {
   position: relative;
   color: white;
@@ -210,10 +210,15 @@ body {
   position: relative;
   top: 0;
 }
+.addBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 /*resonsive*/
 
 /*Mobile*/
-@media only screen and(max-width:600px) {
+/* @media only screen and(max-width:600px) {
   .navStyle {
     .App {
       width: 100%;
@@ -225,11 +230,11 @@ body {
   }
 }
 /*tablet*/
-@media only screen and(max-width:768px) {
+/* @media only screen and(max-width:768px) {
 }
 /*laptop*/
-@media only screen and(max-width:992px) {
-}
+/* @media only screen and(max-width:992px) {
+} */
 /*large Screen*/
-@media only screen and(max-width:1200px) {
-}
+/* @media only screen and(max-width:1200px) {
+} */
