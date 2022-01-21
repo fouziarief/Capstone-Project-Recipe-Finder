@@ -139,15 +139,23 @@ function CreateRecipe() {
           handleMsubmit={handleMsubmit}
         />
       )}
+
       {activeSteps === 3 && (
-        <PreviewRecipe
+        <RecipeList
           values={recipeValues}
           handleChange={handleChange}
           methodtype={methodList}
           ingrediant={ingrediants}
         />
       )}
-      {activeSteps === 4 && <RecipeList />}
+      {/* {activeSteps === 3 && (
+        <PreviewRecipe
+          values={recipeValues}
+          handleChange={handleChange}
+          methodtype={methodList}
+          ingrediant={ingrediants}
+        />
+      )} */}
       <div className="btn-grp">
         <Button
           className="btn1"
@@ -155,7 +163,7 @@ function CreateRecipe() {
           variant="outline-secondary"
           disabled={activeSteps === 0}
           onClick={handlePre}
-          style={activeSteps === 4 ? { display: "none" } : {}}
+          style={activeSteps === 3 ? { display: "none" } : {}}
         >
           back
         </Button>

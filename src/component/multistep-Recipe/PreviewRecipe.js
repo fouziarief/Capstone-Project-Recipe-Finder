@@ -1,7 +1,7 @@
 import React from "react";
 import { ListGroup, Accordion } from "react-bootstrap";
 import "./new.css";
-import recipe from "./img/recipe.png";
+import display from "./img/pepper.jpg";
 
 function PreviewRecipe({ values, methodtype, ingrediant }) {
   const { title, cookingTime, serving, cusineType, image } = values;
@@ -12,7 +12,7 @@ function PreviewRecipe({ values, methodtype, ingrediant }) {
     <div className="outerbox">
       <div className="pic">
         <img
-          src={recipe}
+          src={display}
           className="recipeImg"
           alt="preview recipe"
           width="60%"
