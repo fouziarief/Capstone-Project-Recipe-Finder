@@ -42,6 +42,7 @@ function CreateRecipe() {
   const handleFileChange = (file) => (e) => {
     setRecipeValues({ ...recipeValues, [file]: e.target.files[0] });
   };
+
   const handleSumbit = (e) => {
     if (ingrediants !== null) {
       const newIngrediant = {
