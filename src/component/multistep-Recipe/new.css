@@ -123,6 +123,10 @@ Form {
   position: absolute;
   right: 50%;
 }
+.preview {
+  padding: 10px;
+  color: red;
+}
 /* @media only screen and(max-width: 800px) { */
 /* Form {
     max-width: 500px;

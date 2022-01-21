@@ -139,7 +139,12 @@ function CreateRecipe() {
         />
       )}
       {activeSteps === 3 && (
-        <PreviewRecipe values={recipeValues} handleChange={handleChange} />
+        <PreviewRecipe
+          values={recipeValues}
+          handleChange={handleChange}
+          methodtype={methodList}
+          ingrediant={ingrediants}
+        />
       )}
       {activeSteps === 4 && <RecipeList />}
       <div className="btn-grp">

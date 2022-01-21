@@ -3,15 +3,21 @@ import { ListGroup, Accordion } from "react-bootstrap";
 import "./new.css";
 import recipe from "./img/recipe.png";
 
-function PreviewRecipe({ values }) {
-  const { title, cookingTime, serving, cusineType } = values;
+function PreviewRecipe({ values, methodtype, ingrediant }) {
+  const { title, cookingTime, serving, cusineType, image } = values;
 
-  console.log(values);
+  console.log(methodtype);
 
   return (
     <div className="outerbox">
       <div className="pic">
-        <img src={recipe} className="recipeImg" alt="preview recipe" />
+        <img
+          src={recipe}
+          className="recipeImg"
+          alt="preview recipe"
+          width="60%"
+        />
+        {/* <img src={image} className="recipeImg" alt="preview recipe" /> */}
       </div>
       <div className="inner">
         <ListGroup
@@ -23,23 +29,45 @@ function PreviewRecipe({ values }) {
             letterSpacing: "normal",
           }}
         >
-          <ListGroup.Item>Title : {title}</ListGroup.Item>
-          <ListGroup.Item>Cooking Time : {cookingTime}</ListGroup.Item>
-          <ListGroup.Item>Serving : {serving}</ListGroup.Item>
-          <ListGroup.Item>Cusine Type : {cusineType}</ListGroup.Item>
           <ListGroup.Item>
-            <Accordion defaultActiveKey="0">
+            Title : <span className="preview">{title}</span>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            Cooking Time :<span className="preview">{cookingTime}</span>{" "}
+          </ListGroup.Item>
+          <ListGroup.Item>
+            Serving :<span className="preview">{serving}</span>{" "}
+          </ListGroup.Item>
+          <ListGroup.Item>
+            Cusine Type :<span className="preview">{cusineType}</span>{" "}
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Ingrediant</Accordion.Header>
-                <Accordion.Body></Accordion.Body>
+                <Accordion.Body>
+                  <ul className="cards">
+                    {ingrediant.map((get) => {
+                      return <li key={get.id}>{get.value}</li>;
+                    })}
+                  </ul>
+                </Accordion.Body>
               </Accordion.Item>
             </Accordion>
           </ListGroup.Item>
           <ListGroup.Item>
-            <Accordion defaultActiveKey="0">
+            <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Method</Accordion.Header>
-                <Accordion.Body></Accordion.Body>
+                <Accordion.Body>
+                  {
+                    <ol className="cards">
+                      {methodtype.map((getList) => {
+                        return <li key={getList.id}>{getList.value}</li>;
+                      })}
+                    </ol>
+                  }
+                </Accordion.Body>
               </Accordion.Item>
             </Accordion>
           </ListGroup.Item>
