@@ -16,6 +16,12 @@
   justify-content: center;
   padding: 6px;
   margin: 10px;
+  background: linear-gradient(
+    125deg,
+    rgba(36, 35, 35, 0.1),
+    rgba(75, 74, 74, 0.6),
+    rgba(139, 138, 138, 0.8)
+  );
   transition: 0.6s ease-in-out;
 }
 .wrap:hover {
@@ -93,6 +99,35 @@
   left: 0;
   border: 1px solid white;
   background-color: rgba(34, 33, 33, 0.8);
+}
+.lable {
+  display: inline-block;
+  /* flex-direction: column; */
+  padding: 10px;
+  color: black;
+  font-family: fantasy;
+  font-weight: 800;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.lable label,
+p {
+  margin-bottom: 20px;
+}
+.lable h6 {
+}
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+  position: absolute;
+  right: 10%;
+  top: -10%;
+}
+.headerNav .btn {
+  margin-left: 20px;
 }
 .display-ingre {
   color: white;

@@ -6,6 +6,7 @@ import RecipeIngrediant from "./RecipeIngrediant";
 import RecipeMethod from "./RecipeMethod";
 import PreviewRecipe from "./PreviewRecipe";
 import RecipeList from "../NavList/MyRecipe";
+import { Link } from "react-router-dom";
 
 function CreateRecipe() {
   const [activeSteps, setActiveStep] = useState(0);
@@ -28,6 +29,7 @@ function CreateRecipe() {
 
   const [ingrediants, setIngrediants] = useState([]);
   const [methodList, setMethodList] = useState([]);
+  const [preview, setPreview] = useState([]);
 
   const handleNext = () => {
     setActiveStep((nextStep) => nextStep + 1);
@@ -67,6 +69,15 @@ function CreateRecipe() {
     setRecipeValues({ ...recipeValues, method: " " });
     e.preventDefault();
   };
+  const handlePreview = (e) => {
+    if (preview !== null) {
+      setPreview([...recipeValues, preview]);
+      console.log(recipeValues);
+      console.log(preview);
+    }
+
+    e.preventDefault();
+  };
   useEffect(() => {
     console.log("effeced");
   }, []);
@@ -80,22 +91,25 @@ function CreateRecipe() {
           className="ml-5"
           className="btn1"
           variant="outline-dark"
-          onClick={handleNext}
+          // onClick={handleNext}
+          onClick={handlePreview}
         >
-          Preview
+          <Link to={"/RecipeList"} href="#">
+            Add
+          </Link>
         </Button>
       );
-    } else if (activeSteps === 3) {
-      return (
-        <Button
-          className="ml-5"
-          className="btn1"
-          variant="outline-dark"
-          onClick={handleNext}
-        >
-          Add{" "}
-        </Button>
-      );
+      // } else if (activeSteps === 2) {
+      //   return (
+      //     <Button
+      //       className="ml-5"
+      //       className="btn1"
+      //       variant="outline-dark"
+      //       onClick={
+      //     >
+      //       Add
+      //     </Button>
+      //   );
     } else {
       return (
         <Button
@@ -103,9 +117,7 @@ function CreateRecipe() {
           className="btn1"
           variant="outline-dark"
           onClick={handleNext}
-          style={
-            activeSteps === 0 && activeSteps === 3 ? { display: "none" } : {}
-          }
+          style={activeSteps === 3 ? { display: "none" } : {}}
         >
           Next
         </Button>
@@ -146,6 +158,7 @@ function CreateRecipe() {
           handleChange={handleChange}
           methodtype={methodList}
           ingrediant={ingrediants}
+          preview={preview}
         />
       )}
       {/* {activeSteps === 3 && (

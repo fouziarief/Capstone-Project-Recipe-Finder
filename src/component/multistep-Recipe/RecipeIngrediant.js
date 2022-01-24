@@ -12,7 +12,7 @@ function RecipeIngrediant({
   setIngrediant,
 }) {
   const ref = useRef(null);
-  console.log(values, ingrediant);
+
   useEffect(() => {
     ref.current.focus();
   }, []);
