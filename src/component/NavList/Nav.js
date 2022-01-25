@@ -21,9 +21,9 @@ function Nav() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar className="navStyle ">
-              <Link to={"/Login"} className="navName" href="#login">
+              {/* <Link to={"/Login"} className="navName" href="#login">
                 SignIn
-              </Link>
+              </Link> */}
               <div className="bar">
                 <Link to="#" className="menu-bar">
                   <GiHamburgerMenu

@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ListGroup, Accordion } from "react-bootstrap";
 import "./new.css";
 import display from "./img/pepper.jpg";
+import firebase from "../firebaseRecipe";
 
 function PreviewRecipe({ values, methodtype, ingrediant }) {
   const { title, cookingTime, serving, cusineType, image } = values;
+  // useEffect(() => {
+  //   firebase
+  //     .firestore()
+  //     .collection("recipe-zone")
+  //     .doc()
+  //     .set({
+  //       title: title,
+  //       cookingtime: cookingTime,
+  //       serving: serving,
+  //       cusineType: cusineType,
+  //       ingrediant: ingrediant,
+  //       method: methodtype,
+  //     })
+  //     .then((data) => console.log(data))
+  //     .catch((err) => console.log(err));
+  // }, []);
 
   return (
     <div className="outerbox">

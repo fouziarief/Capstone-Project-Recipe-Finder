@@ -137,6 +137,7 @@ function CreateRecipe() {
           handleChange={handleChange}
           methodtype={methodList}
           handleMsubmit={handleMsubmit}
+          setMethodList={setMethodList}
         />
       )}
 
