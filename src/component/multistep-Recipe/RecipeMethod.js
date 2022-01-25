@@ -19,12 +19,7 @@ function RecipeMethod({
     e.preventDefault();
     setMethodList(methodtype.filter((getList) => getList.id !== id));
   };
-  const edit = (id) => {
-    const newTask = methodtype.map((getList) =>
-      getList.id === id ? { title, id } : id
-    );
-    setMethodList(newTask);
-  };
+
   return (
     <div className="outerbox">
       <div className="pic">
