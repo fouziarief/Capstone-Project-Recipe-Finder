@@ -6,8 +6,6 @@ import display from "./img/pepper.jpg";
 function PreviewRecipe({ values, methodtype, ingrediant }) {
   const { title, cookingTime, serving, cusineType, image } = values;
 
-  console.log(methodtype);
-
   return (
     <div className="outerbox">
       <div className="pic">

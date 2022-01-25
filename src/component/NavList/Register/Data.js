@@ -24,8 +24,8 @@ export const Data = [
     className: "Nav-text",
   },
   {
-    title: "List",
-    path: "/RecipeList",
+    title: "Cookbook",
+    path: "/RecipeBook",
     icon: (
       <MdRestaurantMenu
         style={{ marginRight: "15px", position: "absolute", left: "30px" }}

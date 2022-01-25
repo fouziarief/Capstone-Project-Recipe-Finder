@@ -5,7 +5,7 @@ import RecipeDetails from "./RecipeDetails";
 import RecipeIngrediant from "./RecipeIngrediant";
 import RecipeMethod from "./RecipeMethod";
 import PreviewRecipe from "./PreviewRecipe";
-import RecipeList from "../NavList/MyRecipe";
+import MyRecipe from "../NavList/MyRecipe";
 import { Link } from "react-router-dom";
 
 function CreateRecipe() {
@@ -52,7 +52,6 @@ function CreateRecipe() {
         id: Math.floor(Math.random() * 1000),
       };
       setIngrediants([...ingrediants, newIngrediant]);
-
       setRecipeValues({ ...recipeValues, ingrediant: "" });
       console.log();
     }
@@ -69,15 +68,7 @@ function CreateRecipe() {
     setRecipeValues({ ...recipeValues, method: " " });
     e.preventDefault();
   };
-  const handlePreview = (e) => {
-    if (preview !== null) {
-      setPreview([...recipeValues, preview]);
-      console.log(recipeValues);
-      console.log(preview);
-    }
 
-    e.preventDefault();
-  };
   useEffect(() => {
     console.log("effeced");
   }, []);
@@ -91,12 +82,9 @@ function CreateRecipe() {
           className="ml-5"
           className="btn1"
           variant="outline-dark"
-          // onClick={handleNext}
-          onClick={handlePreview}
+          onClick={handleNext}
         >
-          <Link to={"/RecipeList"} href="#">
-            Add
-          </Link>
+          Add
         </Button>
       );
       // } else if (activeSteps === 2) {
@@ -152,23 +140,22 @@ function CreateRecipe() {
         />
       )}
 
-      {activeSteps === 3 && (
-        <RecipeList
-          values={recipeValues}
-          handleChange={handleChange}
-          methodtype={methodList}
-          ingrediant={ingrediants}
-          preview={preview}
-        />
-      )}
       {/* {activeSteps === 3 && (
-        <PreviewRecipe
+        <MyRecipe
           values={recipeValues}
           handleChange={handleChange}
           methodtype={methodList}
           ingrediant={ingrediants}
         />
       )} */}
+      {activeSteps === 3 && (
+        <PreviewRecipe
+          values={recipeValues}
+          handleChange={handleChange}
+          methodtype={methodList}
+          ingrediant={ingrediants}
+        />
+      )}
       <div className="btn-grp">
         <Button
           className="btn1"

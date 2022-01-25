@@ -20,7 +20,8 @@ function App() {
           <Route exact path="/Login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path="/AddRecipe" element={<CreateRecipe />} />
-          <Route path="/RecipeList" element={<MyRecipe />} />
+          <Route path="/RecipeBook" element={<MyRecipe />} />
+          <Route path="/CookBook" element={<MyRecipe />} />
           <Route path="/SignUp" element={<SignUp />} />
         </Routes>
         {/* </AuthProvider> */}

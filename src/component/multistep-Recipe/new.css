@@ -127,16 +127,148 @@ Form {
   padding: 10px;
   color: red;
 }
-/* @media only screen and(max-width: 800px) { */
-/* Form {
-    max-width: 500px;
-  } */
-/* .outerbox {
+
+/* responsive */
+@media (max-width: 1200px) {
+  .outerbox {
+    width: 90%;
+    /* margin: 20px 80px; */
+    margin: 20px 50px 20px 150px;
+
+    top: 20px;
+    position: relative;
+
+    height: 110vh;
+  }
+  .inner {
+    height: 110vh;
+  }
+  .pic {
+    width: 90%;
+    /* margin-left: -5px; */
+    height: 110vh;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 992px) {
+  .steps {
     width: 100%;
-    border: 5px solid black;
-  } */
-/* .pic {
+  }
+  .outerbox {
+    width: 100%;
+    margin: auto;
+    top: -20px;
+    position: relative;
+    height: 100vh;
+  }
+
+  .pic {
+    width: 100%;
+    /* margin-left: -5px; */
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inner {
+    height: 90vh;
+    top: -20px;
+  }
+
+  .btn-grp {
+    margin-left: 45%;
+    margin-top: -15%;
     width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .steps {
+    width: 100%;
+  }
+  .outerbox {
+    width: 100%;
+    margin: auto;
+    /* top: -20px; */
+    position: relative;
+    /* height: 100vh; */
+  }
+  .pic {
+    width: 90%;
+    /* margin-left: -5px; */
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inner {
+    height: 80vh;
+    top: -40px;
+  }
+  /* .inner {
+    left: 0;
+    top: -60px;
   } */
+
+  .btn-grp {
+    margin-left: 45%;
+    margin-top: -15%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .steps {
+    width: 100%;
+  }
+  .outerbox {
+    width: 100%;
+    margin: auto;
+    top: 10px;
+    position: relative;
+    height: 100vh;
+  }
+  .pic {
+    display: none;
+  }
+  .inner {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .btn-grp {
+    margin-left: 45%;
+    margin-top: -15%;
+    width: 50%;
+  }
+}
+@media (max-width: 300px) {
+  .steps {
+    width: 100%;
+  }
+  .outerbox {
+    width: 100%;
+    margin: auto;
+    top: 10px;
+    position: relative;
+    height: 100vh;
+  }
+  .pic {
+    display: none;
+  }
+  .inner {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .btn-grp {
+    margin-left: 45%;
+    margin-top: -15%;
+    width: 50%;
+  }
+}
